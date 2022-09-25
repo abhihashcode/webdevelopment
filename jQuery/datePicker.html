@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+
+</head>
+
+<body>
+
+    <h1 style="text-transform: uppercase; text-align: center">Enter Your Biodata</h1>
+    <form action="#" method="get">
+        <fieldset>
+            <legend align="bottom" style="text-transform: uppercase;font-size:1.6em">Biodata:</legend>
+
+            Name : <input type="text" size="30" class="form-control" placeholder="User name"><br></br>
+            Email : <input type="email" size="30" class="form-control" placeholder="User name"><br></br>
+            D O B : <input type="text" size="30" class="form-control" id="datepicker"><br></br>
+
+            <input type="submit">
+        </fieldset>
+    </form>
+
+
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#datepicker").datepicker();
+        });
+    </script>
+
+
+</body>
+
+</html>

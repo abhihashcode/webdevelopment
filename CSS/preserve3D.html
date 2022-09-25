@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background:silver;
+        }
+        
+        .main-div{
+            height: 300px;
+            width:300px;
+            top: 50%;
+            left: 50%;
+            margin: -150px;
+            background:gray;
+            position: absolute;
+            perspective:500px;
+        }
+        
+        .content{
+            width:100%;
+            height: 100%;
+            position: absolute;
+            transition:all 1s linear;
+            transform-style:preserve-3d ;
+            perspective: 800px;
+        }
+        .front,.back{
+            height: 100%;
+            width:100%;
+            background: #3c6e7af1;
+            position:absolute;
+            color:tomato;
+            backface-visibility:hidden;
+            border-radius:5px;
+        }
+        .front{
+          border-radius:5px;  
+        }
+        .back{
+            color: #fff;
+            background:tomato;
+           transform:rotateY(180deg);
+        }
+
+        .main-div:hover .content{
+            transform:rotateY(180deg);
+        }
+
+        .details{
+            font-size :20px;
+        }
+
+        img{
+            height: 150px;
+            width:300px;
+        }
+
+        .card-body p{
+            font-size :20px;
+            font-weight :bold;
+            text-transform: uppercase;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(129, 27, 27);
+            text-indent: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preserve 3D</h1>
+
+    <div class="main-div">
+        <div class="content">
+            <div class="front">
+                <div class="header">
+                    <img src="anpiccon.jpg" alt="" class="client-img">
+                </div>
+                <div class="card-body">
+                    <p>Ankit Kumar</p>
+                </div>
+                <div class="footer">
+                    <p>Web Developer</p>
+                    <button class="btn">Show</button>
+                </div>
+            </div>
+            <div class="back">
+                <div class="header">
+                    <h1 class="details">Details About Client</h1>
+                    <img src="anpiccon.jpg" alt="" class="client-img">
+                </div>
+                <div class="card-body">
+                    <p>Ankit Kumar</p>
+                </div>
+                <div class="footer">
+                    <p>Web Developer</p>
+                    <button class="btn">Show</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

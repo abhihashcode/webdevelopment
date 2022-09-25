@@ -1,0 +1,14 @@
+<script>
+    function outerFun(a) {
+        let b = 10;
+
+        function innerFun() {
+            console.log(`The sum of ${a} and ${b} = ${a+b}`);
+        }
+        return innerFun;
+    }
+
+    let inner = outerFun(4);
+    console.dir(inner);
+    inner();
+</script>

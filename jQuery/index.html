@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Rivision</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="test">I am going to hide</div>
+    <button class="hide">Click</button>
+    <script>
+        $(document).ready(function() {
+            $('.hide').click(function() {
+                $('.test').hide();
+                $('.hide').text('SHow').click(function() {
+                    $('.test').show();
+                    $('.hide').text('Click');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

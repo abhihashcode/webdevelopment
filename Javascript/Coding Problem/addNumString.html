@@ -1,0 +1,11 @@
+<script>
+    let str="va23lr43i";
+    let sum=0;
+    for(i=0;i<str.length;i++) {
+        if((str.charAt(i)<65 || str.charAt(i)>90) && (str.charAt(i)<97 || str.charAt(i)>122)){
+            sum+=parseInt(str.charAt(i));
+        }
+    }
+
+    console.log(sum);
+</script>

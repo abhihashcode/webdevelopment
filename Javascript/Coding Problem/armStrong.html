@@ -1,0 +1,17 @@
+<script>
+    let num=153;
+    let t,sum=0;
+    let tmp=num;
+
+    while(num>0){
+        t=num%10;
+        sum=sum+(t*t*t);
+        num=num/10;
+    }
+
+    if(tmp==sum){
+        console.log("Armstrong Number");
+    }else{
+        console.log("Not Armstrong Number");
+    }
+</script>

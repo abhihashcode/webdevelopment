@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Visitor Plugins</title>
+    
+    <style>
+        #box{
+            height: 100%;
+            width: 100%;
+            border: 1px solid red;
+            padding: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .visitor-data{
+            display: flex;
+            color: rebeccapurple;
+            margin: 5rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="box"></div>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery.visitor.js"></script>
+    <!-- <script src="jquery.youtube.js"></script> -->
+    <script>
+        // jQuery('#box').youtube({
+        //     id:"G78zVnvhIWs"
+        // });
+
+        $("#box").visitor();
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+    <h1 style="text-align:center">Mouse Pointer</h1>
+    <p>
+        X: <span id="x-value"></span>
+    </p>
+   
+    <p>    
+       Y: <span id="y-value"></span>
+    </p>
+</body>
+<script type="text/javascript">
+  window.addEventListener("mousemove",function(e){
+      document.getElementById("x-value").innerHTML = e.clientX;
+      document.getElementById("y-value").innerHTML = e.clientY;
+  });
+</script>
+</html>

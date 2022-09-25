@@ -1,0 +1,26 @@
+<script>
+    let youtube = {
+        name: 'C S Doj',
+        content: 'Computer',
+        thanks: function(rating, support) {
+            console.log(`Hello ${this.name} you are teaching ${this.content} people are giving you ${rating} star and please ${support} guys.`);
+        }
+    }
+    youtube.thanks(6, 'Unsubscribe');
+    let check = {
+        name: 'ThapaTechnical',
+        content: 'Programming'
+    }
+    youtube.thanks.call(check, (5, 'Subscribe'));
+    youtube.thanks.apply(check, [5, 'Subscribe']);
+
+    //second example of apply
+
+    // let max = Math.max(1, 2, 3, 4, 20, 25, 12);
+    // console.log(max);
+
+    // Maths.max() method is not applicable to array so apply method is make this possible
+
+    let arrMax = Math.max.apply(null, [1, 2, 3, 4, 20, 25, 12]);
+    console.log(arrMax);
+</script>

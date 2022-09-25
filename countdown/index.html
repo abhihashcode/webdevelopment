@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown Timer</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+   
+</head>
+<body>
+    <div class="countdown countdown-container container">
+        <div class="clock row">
+            <div class="clock-item clock-days countdown-time-values col-sm-6 col-md-3">
+                <div class="wrap">
+                    <div class="inner">
+                        
+                        <div id="canvas-days" class="clock-canvas"></div>
+                        
+                        <div class="text">
+                            <p class="val">0</p>
+                            <p class="type-days type-time">DAYS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         
+            <div class="clock-item clock-hours countdown-time-values col-sm-6 col-md-3">
+                <div class="wrap">
+                    <div class="inner">
+                        
+                        <div id="canvas-hours" class="clock-canvas"></div>
+                        
+                        <div class="text">
+                            <p class="val">0</p>
+                            <p class="type-hours type-time">HOURS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+
+            <div class="clock-item clock-minutes countdown-time-values col-sm-6 col-md-3">
+                <div class="wrap">
+                    <div class="inner">
+                        
+                        <div id="canvas-minutes" class="clock-canvas"></div>
+                        
+                        <div class="text">
+                            <p class="val">0</p>
+                            <p class="type-minutes type-time">MINUTES</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="clock-item clock-seconds countdown-time-values col-sm-6 col-md-3">
+                <div class="wrap">
+                    <div class="inner">
+                        
+                        <div id="canvas-seconds" class="clock-canvas"></div>
+                        
+                        <div class="text">
+                            <p class="val">0</p>
+                            <p class="type-seconds type-time">SECONDS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="kinetic.js"></script>
+<script type="text/javascript" src="jquery.final-countdown.js"></script>
+<script type="text/javascript">  
+    $('document').ready(function() {
+        'use strict';
+        
+    	$('.countdown').final_countdown({
+            'start': 1362139200,
+            'end': 1388461320,
+            'now': 1387461319        
+        });
+    });
+</script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,16 @@
+<script>
+    const youtube = {
+        name: 'CS Doj',
+        content: 'Programming',
+        features: function() {
+            console.log(`${this.name} is understand ${this.content} very best way.`);
+        }
+
+    }
+
+    let youtubeFun2 = youtube.features;
+    youtubeFun2();
+
+    let youtubeFun = youtube.features.bind(youtube);
+    console.log(youtubeFun());
+</script>

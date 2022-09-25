@@ -1,0 +1,38 @@
+<!-- First Class Function is arises three point and then satisfied that this programming language has first class function
+citizen function.
+
+1. Function can assigned to a variable.
+2. Pass a function as arguments.
+3. A function can return another function. -->
+
+
+<script>
+    // 1
+    let a = function check() {
+        console.log("Checking first class citizen function");
+    }
+
+    a();
+
+    // 2
+    function myName() {
+        return "Abhishek";
+    }
+
+    function gretting(name, welcomeMsg) {
+        console.log(name() + " " + welcomeMsg);
+    }
+
+    gretting(myName, "Welcome");
+
+    // 3
+    function mainFunction() {
+        return function returnFunction() {
+            console.log("Done that the javascript has first class citizen function");
+        }
+    }
+
+    // mainFunction()();
+    let b = mainFunction();
+    b();
+</script>

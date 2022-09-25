@@ -1,0 +1,54 @@
+html,body{
+    height: 100%;
+}
+
+html{
+    background-image:url(img/img1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    background: rgba(44, 59, 80, 0.7);
+    background-image: url(img/pattern.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: tahoma;
+    text-transform:uppercase;
+    color: rgba(44, 59, 80, 0.7);
+}
+
+.countdown-container{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.clock-item .inner{
+    height: 0px;
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.clock-canvas{
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    height: 0px;
+    padding-bottom: 100%;
+}
+
+.text{
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: -50px;
+    position: absolute;
+    top:50%;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    width: 100%;
+}
+

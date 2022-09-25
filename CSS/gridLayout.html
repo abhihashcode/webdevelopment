@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>HTML Layout</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+            animation: animate 0.2s ease-in-out alternate infinite;
+        }
+      main{
+            margin: 20px auto;
+            width:75%;
+            border: 3px solid #ccc;
+            display: grid;
+            grid-template-rows:100px 150px 200px 0px 100px;
+            grid-template-columns: repeat(3,1fr) 200px;
+            grid-gap: 10px;
+            border-radius: 24px;
+            background-color:black;
+            animation: animate 0.2s ease-in-out alternate infinite;
+      }
+      
+      main>div{
+        border-radius: 20px;
+        font-weight: bold;
+        color: #ccc;
+        font-family: "Helvetica Neue",Helvetica;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+      }
+
+      .div1{background-color:#bd1b1be1;grid-column:1/-1;}
+      .div2{background-color:blue;}
+      .div3{background-color:yellow;}
+      .div4{background-color:orange;}
+      .div5{background-color:rgb(102, 27, 27);
+            grid-row: 2/span 3;
+            grid-column: 4/5;
+            
+         }
+      .div6{background-color:tomato;
+    grid-column: 1/span 3;}
+      .div7{background-color:gray;
+         grid-column: 1/-1;
+    }
+
+    h1{
+        text-align:center;
+        font-size: 300px;
+        color: #fff;
+    }
+
+    @keyframes animate {
+        0%{
+            background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);        }
+        50%{
+            background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+        }
+        100%{
+            background-image: linear-gradient(to right top, #d1a06b, #e29277, #e9878e, #e282ac, #c986ca, #c086d3, #b687db, #a889e4, #c180dc, #d775cf, #eb6abf, #fb5faa);
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>Grid Layout</h1>
+    <main>
+       
+        <div class="div1">Header</div>
+        <div class="div2">Box1</div>
+        <div class="div3">Box2</div>
+        <div class="div4">Box3</div>
+        <div class="div5">Side Bar</div>
+        <div class="div6">Main Content</div>
+        <div class="div7">Footer</div>
+    </main>
+</body>
+</html>

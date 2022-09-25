@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="thapa">Thapa</p>
+    <p class="welcome">Technical 1</p>
+    <p class="welcome">Technical 2</p>
+    <p class="welcome">Technical 3</p>
+    <p class="welcome">Technical 4</p>
+
+    <ul>
+        <li>like</li>
+        <li>share</li>
+        <li>subscribe</li>
+    </ul>
+
+
+    <script>
+        var child = document.body.children;
+        console.log(child);
+
+        var para = document.createElement("p");
+        var text = document.createTextNode("This is new text");
+
+        para.appendChild(text);
+
+        document.body.appendChild(para);
+
+        var list = document.querySelector("ul");
+        console.log(list);
+
+        console.log(list.firstChild);
+        console.log(list.lastChild);
+
+        console.log(list.parentNode)
+
+        var firstSibling = thapa.nextElementSibling.nextElementSibling;
+        console.log(firstSibling)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .animateDiv {
+            height: 98px;
+            width: 98px;
+            margin: 50px;
+            position: relative;
+            border: 1px solid red;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button class="startAnimate">Click</button>
+        <div class="animateDiv"></div>
+    </div>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".startAnimate").click(function() {
+                $(".animateDiv").animate({
+                    left: 500,
+                    height: 98 / 2,
+                    width: 98 / 2
+                });
+
+                $(".animateDiv").animate({
+                    top: 200
+                });
+
+                $(".animateDiv").animate({
+                    top: 200,
+                    left: 0
+                });
+
+                $(".animateDiv").animate({
+                    left: 0,
+                    top: 0,
+                    height: 98,
+                    width: 98
+                });
+            })
+        });
+    </script>
+</body>
+
+</html>

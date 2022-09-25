@@ -1,0 +1,40 @@
+<script>
+    function isPalindrome(str){
+        
+        // let revStr="";
+        // for(let i=str.length-1;i>=0;i--){
+        //     revStr+=str[i];
+        // }
+
+        // if(revStr==str){
+        //     console.log("Palindrome");
+        // }else{
+        //     console.log("Not Palindrome");
+        // }
+
+        let l=str.length-1,f=0,fst=0;
+        //  let word=str.split("");
+        while(fst<l){
+           if(str.charAt(fst)!=str.charAt(l)){
+               f++;
+               break;
+           }
+           l--;
+           fst++;
+        }
+
+        if(f==0){
+            console.log("Palindrome");
+        }else{
+            console.log("Not palindrome");
+        }
+
+
+        //  if(str.split("").reverse().join("")==str)
+        //     console.log("Yes");
+        // else 
+        //     console.log("No");
+    }
+
+    isPalindrome("naman");
+</script>
