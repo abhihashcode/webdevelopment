@@ -1,0 +1,29 @@
+<html>
+    <head>
+         <script src="jquery.min.js"></script>
+         <script>
+               $(document).ready(function(){
+                     $("li").hover(function(){
+                        $(this).animate({fontSize:'35px'},2000);
+                       });
+                });
+         </script>
+         <style>
+                li{
+                   font-size:25px;
+                   list-style:none;
+                   margin:10px;
+                   text-align:center;
+                   display:inline-block;
+                    }
+         </style> 
+   </head>
+   <body>
+       <ul>
+           <li>I</li>
+           <li>I</li>
+           <li>C</li>
+           <li>S</li>
+       </ul>
+   </body>
+</html>

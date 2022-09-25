@@ -1,0 +1,70 @@
+<html>
+   <head>
+       <script>
+            function draw()
+               {
+              c=document.getElementById('canvas');
+              ctx=c.getContext("2d");
+              ctx.beginPath();
+              ctx.lineWidth="3";
+              ctx.moveTo(120,140);
+              ctx.lineTo(120,250);
+              ctx.strokeStyle="green";
+              ctx.stroke();
+              ctx.closePath();
+              
+              ctx.beginPath();
+              ctx.lineWidth="3";
+              ctx.moveTo(130,130);
+              ctx.lineTo(300,130);
+              ctx.strokeStyle="green";
+              ctx.stroke();
+              ctx.closePath();
+              
+              ctx.beginPath();
+              ctx.lineWidth="3";
+              ctx.moveTo(310,140);
+              ctx.lineTo(310,250);
+              ctx.strokeStyle="green";
+              ctx.stroke();
+              ctx.closePath();
+
+              ctx.beginPath();
+              ctx.lineWidth="3";
+              ctx.moveTo(300,260);
+              ctx.lineTo(132,260);
+              ctx.strokeStyle="green";
+              ctx.stroke();
+              ctx.closePath();
+              
+              ctx.beginPath();
+              ctx.lineWidth="3";
+              ctx.arc(130,140,10,3,-1.3);
+              ctx.strokeStyle="green";
+              ctx.stroke();
+              ctx.closePath();
+              
+              
+              ctx.beginPath();
+              ctx.lineWidth="3";
+              ctx.arc(130,250,10,1.2,-2.7);
+              ctx.strokeStyle="green";
+              ctx.stroke();
+              ctx.closePath();              
+
+              
+              ctx.beginPath();
+              ctx.lineWidth="3";
+              ctx.arc(130,140,10,3,-1.3);
+              ctx.strokeStyle="green";
+              ctx.stroke();
+              ctx.closePath();
+                }
+        </script>
+   </head>
+   <body onLoad="draw();">
+      <center>
+            <canvas id="canvas" height="400" width="600" style="border:5px solid red;"></canvas>
+      </center>
+   </body>
+</html>

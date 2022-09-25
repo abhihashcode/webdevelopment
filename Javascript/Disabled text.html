@@ -1,0 +1,19 @@
+<html>
+<head>
+<script>
+ function counter(){
+var str=t1.value;
+op.value=str.length;
+if(str.length==20)
+ t1.disabled=true;
+}
+</script>
+</head>
+<body>
+<center>
+<textarea name="t1" id="t1" onKeyUp="counter()">
+</textarea>
+ <input type="text" name="op" height="1" width="1" id="op"/>
+</center>
+</body>
+</html>

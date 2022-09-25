@@ -1,0 +1,72 @@
+<html>
+    <head>
+         <script>
+            function draw() 
+                      {    
+               c=document.getElementById("canvas");
+                ctx=c.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(200,200,120,((0*Math.PI)/180),((360*Math.PI)/180));
+                ctx.strokeStyle="darkblue";
+                ctx.fillStyle="darkred"; 
+                 ctx.fill();
+                ctx.stroke();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.arc(200,200,100,(0*Math.PI)/180,-1.6);
+                ctx.strokeStyle="white";
+                ctx.lineWidth="9";
+                ctx.stroke();
+                ctx.closePath();
+
+                 ctx.beginPath();
+                ctx.moveTo(304,202);
+                 ctx.lineTo(220,200);
+                ctx.strokeStyle="white";
+                ctx.lineWidth="9";
+                ctx.stroke();
+                ctx.closePath();
+
+                 ctx.beginPath();
+                ctx.moveTo(200,170);
+                 ctx.lineTo(200,270);
+                ctx.strokeStyle="white";
+                ctx.lineWidth="9";
+                ctx.stroke();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(195.5,274.5);
+                 ctx.lineTo(220,274.5);
+                ctx.strokeStyle="white";
+                ctx.lineWidth="9";
+                ctx.stroke();
+                ctx.closePath();   
+
+                ctx.beginPath();
+                ctx.arc(170,180,7,((0*Math.PI)/180),((360*Math.PI)/180));
+                ctx.strokeStyle="white";
+                ctx.fillStyle="white"; 
+                 ctx.fill();
+                ctx.stroke();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.font="Bold 10em MS Serif";
+                 ctx.fillStyle="silver"; 
+                 ctx.fillText("LG",400,280);
+                 ctx.font="Bold 4em MS Serif";
+                 ctx.fillStyle="silver"; 
+                 ctx.fillText("Life's Good",400,390);
+                ctx.stroke();
+                ctx.closePath();
+                     }
+         </script>
+    </head>
+     <body onLoad="draw()">
+            <center>
+                  <canvas height="500" width="800" id="canvas" style="border:5px solid black"></canvas>
+            </center>
+      </body>
+</html>

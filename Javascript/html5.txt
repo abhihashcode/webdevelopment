@@ -1,0 +1,733 @@
+W3C+WHATWG.
+2004 and it is officially 2014 by W3C and google company.
+
+Third Party like Adobe Photoshop,Flash,Microsoft Silver Light,Google Gear etc.
+
+Company/Product	Html Feature
+-----------------------------------------------------
+exam:-
+a)<script language="javascript" type="text/javascript"></script>
+
+<script></script>
+
+Html5 Semantic Tags:-
+1-<main>
+2-<mark> && <abbr>
+3-<details>
+4-<summary>
+5-<header>
+6-<footer>
+7-<aside>
+8-<nav>
+9-<article>
+10-<section>
+11-<figure>
+12-<figcaption>
+
+HTML5 Document Structure:-
+<!DOCTYPE html>
+<html>
+<head><title>----</title>
+<meta charset="UTF-8"/>
+</head>
+<body>
+-------
+-------
+</body>
+</html>
+
+Html5 Media Graphics:-
+1-Canvas
+2-SVG
+ 
+Attributes of <canvas>:-
+1-id/name
+2-height
+3-width
+
+Syntax:-
+<canvas id="..." height="..." width="...">
+</canvas>
+
+Functions of <Canvas> in Js:-
+1-getContext();
+Syntax:-
+var ctx=c.getContext("2d");
+
+2-rect():- use to draw rectangle
+Syntax:-
+ctx.rect(x,y,w,h);
+
+3-stroke(); use to highlight the drawing path.
+Syntax:-
+ctx.stroke();
+
+4-strokeRect();- use to draw empty rectangle/square.
+Syntax:-
+ctx.strokeRect(x,y,w,h);
+
+5-strokeStyle:- it is use to change the color of stroke.
+Syntax:-
+ctx.strokeStyle="color";
+
+6-fillStyle:- it is use to change the color of solid shape.
+Syntax:-
+ctx.fillStyle="color";
+
+7-clearRect:- it is use to draw/clear a rectangular area shape.
+Syntax:-
+ctx.clearRect(x,y,w,h);
+
+--->fillRect():-use to draw solid/filled rectangle or square.
+Syntax:-
+ctx.fillRect(x,y,w,h);
+
+8-moveTo(); provide starting point of line
+Syntax:-
+ctx.moveTo(x,y);
+
+9-lineTo(); provide end point of line
+Syntax:-
+ctx.lineTo(x,y);
+
+10-lineCap:- change the style of edges of line.
+Syntax:-
+ctx.lineCap="butt||square||round";
+
+11-lineJoin:- change the style of edges at Joining of lines.
+Syntax:-
+ctx.lineJoin="bevel||miter||round";
+
+--->lineWidth=Change the Thickness of any line.
+Syntax:-
+ctx.lineWidth="value";
+
+
+12-beginPath();:- It is use to restart the drawing of new shape.
+Syntax:-
+ctx.beginPath();
+
+13-closePath();:- It is use to end the drawing of shape.
+Syntax:-
+ctx.closePath();
+
+14-fill():- use to fill the color in any drawing shape.And Default color is black.
+Syntax:-
+ctx.fill();
+
+15-arc(); use to draw any arc or circle.
+Syntax:-
+ctx.arc(x,y,r,sangle,eangle,counterwise);
+
+16-arcTo(); use to draw any arc.
+Syntax:-
+ctx.arcTo(x1,y1,x2,y2,r);
+
+Note:- we provide the angle in radian.
+
+radian=degree*PI/180;
+
+17-strokeText():- use to display any empty text on the canvas.
+Syntax:-
+ctx.strokeText(Text,x,y);
+
+18-fillText():- use to display any filled/solid text on the canvas.
+Syntax:-
+ctx.fillText(Text,x,y);
+
+19-font:-Use to change the font formating of the text.
+Syntax:-
+ctx.font="style size fontstyle";
+
+Shadaw In Html Shape:-
+
+20-shadowColor:- use to provide color of shadow.
+Syntax:-
+ctx.shadowColor="color";
+
+21-shadowBlur:- use to provide area of shadow.
+Syntax:-
+ctx.shadowBlue=size;
+
+22-shadowOffsetX:- use to provide horizontal shadow.
+Syntax:-
+ctx.shadowOffsetX=size;//+,-
+
+23-shadowOffsetY:- use to provide Vertical shadow.
+Syntax:-
+ctx.shadowOffsetY=size;//+,-
+
+
+16px=1em
+
+Transformation in Shape:-
+24-scale():-
+Syntax:-
+ctx.scale(w,h);
+values are:-
+0.5=50%
+1=100%
+2=200%
+
+25-rotate():-
+Syntax:-
+ctx.rotate(radian);
+
+
+26-translate();:-it is use to remap the position of the shape.
+Syntax:-
+ctx.translate(x,y);
+
+Drawing of Image:-
+clipped the area of image.
+
+27-drawImage():- use to draw or clip any image on the canvas.
+Syntax:-
+a)ctx.drawImage(img,x,y);
+Resize Image:-
+b)ctx.drawImage(img,x,y,w,h);
+Clippped Part:-
+c)ctx.drawImage(img,sx,sy,sw,sh,x,y,w,h);
+
+Curves in Canvas:-
+1-Quadratic Curve:3 point[s,cp,e]
+2-Bezier Curve:-4 points[s,cp1,cp2,e]
+
+28-quadraticCurveTo():-
+Syntax:-
+ctx.quadraticCurveTo(cpx,cpy,x,y);
+
+29-bezierCurveTo():-
+Syntax:-
+ctx.bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x,y);
+
+Mixing of Colors And Patterns:-
+1-Linear:-Linear Form(left to right to left,)
+2-Radial:-Circular Form(Inner Circle,Outer Circle)
+
+30-createLinearGradient():-Use to create the linear Gradient.
+Syntax:-
+ctx.createLinearGradient(x0,y0,x1,y1);
+
+31-addColorStop(); Use to fill or provide the colors.
+Syntax:-
+ctx.addColorStop(points,color);[points=0-1]
+
+32-createRadialGradient():-
+Syntax:-
+ctx.createRadialGradient(x0,y0,r0,x1,y1,r1);
+
+Composition of Shapes:-
+
+33-globalAlpha:- This property is use to set/get the transparancy of colors. And Range is 0.0 to 1.0
+Syntax:-
+ctx.globalAlpha=value;
+
+34-globalCompositeOperation:- It is use to manage the area of drawing shape on the existing images.
+
+Value of globalCompositeOperation:-
+source-over
+source-atop
+source-in
+source-out
+destination-over
+destination-atop
+destination-in
+destination-out
+lighter
+copy
+xor
+
+SVG:- Scalable Vector Graphics
+
+<svg>:-
+Attributes of <svg>:-
+1-id/name
+2-height
+3-width
+
+Syntax:-
+<svg id="..." height=".." width="..">
+-----
+-----
+</svg>
+
+<rect>:- Use to draw rectangle or square.
+Attributes of <rect>:-
+1-x
+2-y
+3-height
+4-width
+5-fill
+6-stroke
+7-stroke-width
+8-rx
+9-ry
+10-stroke-opacity
+11-fill-opacity
+
+<circle>:-Use to draw circle.
+Attributes of <circle>:-
+1-cx
+2-cy
+3-r
+
+<line>:- use to draw line.
+Attributes of <line>:-
+1-x1
+2-y1
+3-x2
+4-y2
+
+<ellipse>:- Use to draw oval.
+Attributes of <ellipse>:-
+1-cx
+2-cy
+3-rx
+4-ry
+	
+<text>:- use to write or display text.
+Attributes of <text>:-
+1-x
+2-y
+3-fill/stroke
+
+<polygon>:- polygon word is a greek word which is made up of 2 sub words.
+poly=many
+gon=angle
+	It is a closed or solid shape.Which is made up of more than 2 lines.
+Attributes of <polygon>:-
+1-points
+2-fill/stroke
+Syntax:-
+<polygon points="x,y x,y ......" fill="..">
+</polygon>
+
+<tspan>:- use to display multiple lines with same properties of <text>.It is a Sub tag of <text>.
+Attributes of <text>:-
+1-x
+2-y
+
+How to provide linkinig of <text>:-
+<a xlink:href="location" target="...">
+<text x=".." y="..." fill=".." stroke="..">
+Text Message
+</text>
+</a>
+
+<polyline>:-To draw shape with multiple lines.
+Syntax:-
+<polyline points="x1,y1 x2,y2 ....." stroke="..."></polyline>
+
+<image>:-Use to set any existing image on the svg.
+Attributes of <image>:-
+1-x
+2-y
+3-height
+4-width
+5-xlink:href:- location of image.
+
+<defs>:-stands for definition. and it is use to create grouped shape,mixing or colors etc.
+
+<g>:- It is use for grouping of the elments or shapes to each other.
+Syntax:-
+<g id="...">
+-----
+-----
+</g>
+
+<use>:- This tag is use for providing the reusability of controls,shapes or svg code.
+Syntax:-
+<use x=".." y="..." xlink:href="..." style="..."/>
+
+Stroke Properties:-
+stroke
+stroke-width
+stroke-linecap=butt,square,round
+stroke-dasharray
+stroke-opacity
+
+Transformation in SVG:-
+1-translate();
+2-rotate();
+3-scale();
+4-skew();
+	a)skewX();
+	b)skewY();
+
+Note:- We can perform the transformation in svg using "transform" attribute.
+
+translate():- It is use to remap the position of drawing shape.
+Syntax:-
+translate(x,y);
+
+rotate():- It is use to rotate shape in clockwise or anticlockwise direction.
+Syntax:-
+rotate(deg);//clockwise
+rotate(-deg);//Anti-clockwise
+rotate(deg,x,y);//Rotate on specific position
+
+scale():- Use to zoom in/ zoom out shape size.
+Syntax:-
+scale(w,h);//Both are in % format.
+
+skew();:- It is use to scale vertically or horizontally.
+Syntax:-
+skewX(deg);//horizontally
+skewY(deg);//vertically
+
+Svg Scripting:-
+In svg we can also perform operations by using javascript. And for accessing the value of SVG shape/controls we use 2 Methods.
+
+1-setAttribute();: use to change the value of any property.
+syntax:-
+svgobject.setAttribute("attribute",value);
+
+2-getAttribute();: use to get the value of any property.
+syntax:-
+var variable=svgobject.getAttribute("attribute");
+
+
+Gradient & Pattern In SVG:-
+
+1-linearGradient.
+syntax:-
+<linearGradient id="..." x1="...." y1="..." x2="..." y2="...." spreadMethod="pad|reflet|repeat">
+<stop offset="---" stop-color="...." stop-opacity="..."/>
+<stop offset="---" stop-color="...." stop-opacity="..."/>
+</linearGradient>
+
+how to use gradient:-
+style="fill:url(#idname)"
+fill="url(#id)"
+
+
+2-radialGradient.
+syntax:-
+<radialgradient id="...." cx="..." cy="..." r="...." fx="..." fy="...." spreadMethod="pad">
+<stop offset="...." stop-color="...."/>
+<stop offset="...." stop-color="...."/>
+</radialgradient>
+
+
+Pattern:-
+syntax:-
+<pattern id="..." x="..." y="..." width="..." height="..." patternUnits="userSpaceOnUse" patternTransform="...">
+---------
+---------
+</pattern>
+
+SVG Animation:- In SVG animation there are 2 methods to provide the animation on the shape.
+
+1-<animateTransform>:-
+Syntax:-
+<animateTransform attributeName="transform" type="..." from="..." to="..." begin="..." dur="..." repeatCount="..." repeatDur="...">
+-----
+-----
+</animateTransform>
+
+Duration Timing:-
+h=Hour
+min=minutes
+s=seconds
+ms=milliseconds
+
+Note:-When we use more than one tranformation then only last effect will be apply.So if we want to apply all the effects we use "additive=sum" attribute.
+
+2-<animate> This tag is use to change the XML and Css properties of the shapes.
+
+Attributes of <animate>:-
+1-attributeName
+2-attributeType=XML,CSS
+3-begin:
+4-end
+5-dur
+6-repeatCount
+7-fill=remove,freeze
+8-repeatDur
+9-values="value1; value2;....."
+10-keyTime=
+11-from=""
+12-to
+13-xlink:href="#idname"
+
+Example:-
+
+<animate attributeName="fill" attributeType="css" begin="0s" end="5s" from="red" to="green" values="red;orange;yellow;pink;green" keyTime="0s; 0.5s; 0.9s;1s" xlink:href="#bus">
+</animate>
+
+Form 2.0 Improved:-
+1-New Form Attributes:-
+	a)autocomplete.
+	b)novalidate.
+
+2-New Form Elements:-
+	a)<datalist>:- 'list' attribute of <input>.
+Syntax:-
+<datalist id="...">
+<option value="...">....</option>
+<option value="...">....</option>
+----------
+</datalist>
+
+	b)<output>:-
+Syntax:-
+<output name="..." for="  "></output>
+
+	c)<keygen>:-This tag is use to generate the security key in the form "two key".
+First is public key which is sent to the server with <form> and private key kept in the source system.
+
+Syntax:-
+<keygen name="..." type="rsa|des|ec"></keygen>
+
+RSA-Rivest Sammir Adleman
+DES-Data Encryption Standard.
+EC-Electronic Certificate.
+
+
+3-New Input Attributes:-
+autocomplete
+autofocus
+required
+placeholder
+form
+formmethod
+formaction
+formtarget
+formenctype
+formnovalidate
+max
+min
+step
+list
+pattern
+spellcheck
+multiple
+novalidate
+height
+width
+
+
+4-New Input Elements:-
+color
+Date:- date
+Datetime:-date &time
+datetime-local:- date time along with local setting
+url:-
+month
+week
+time
+tel:-telephone//safari 8
+search:-
+range:
+number
+email
+
+Html 5 Media:-
+
+1-<video>:- It is use to play video files.
+And it support Mp4,Ogg,WebM.
+
+Media type:-
+Mp4	video/Mp4
+Ogg	video/ogg
+WebM	video/webM
+
+Properties of <Video>:-
+1-loop
+2-muted
+3-poster
+4-preload:- auto,metadata,none
+5-autoplay
+6-src
+7-height
+8-width
+9-controls
+
+<source>:- Use to provide multiple videos to support in <video>. 
+
+Attributes of <source>:-
+1-src
+2-type: media type.
+
+Syntax:-
+<video src="...." controls.............>
+<source src="...." type="...."/>
+<source src="...." type="...."/>
+------
+------
+</video>
+
+<audio>:- USe to play audio file. ANd supported format is:-
+mp3,wav,ogg
+
+Media type:-
+Type	Media
+mp3	audio/mpeg
+wav	audio/wav
+ogg	audio/ogg
+
+Attributes of <audio>:-
+1-src
+2-autoplay
+3-muted
+4-preload
+5-controls
+6-loop
+
+Syntax:-
+<audio src="..." autoplay muted preload="...." controls loop>
+</audio>
+
+
+Audio/Video DOM model:-
+
+Functions:-
+load();
+play();
+pause();
+
+Properties:-
+loop:-true,
+false
+controls:- true ,false
+muted:-t,f
+ended:t,f
+paused
+duration: in seconds.
+currentSrc
+src
+currentTime:- in seconds
+width
+height
+autoplay
+volume:[0.0-1.0]
+
+Html 5 API:-
+--------------------------------------
+1-Web Storage.
+	In Web Storage "Storage" class is defined to perform the cookie & session management.
+
+a)localStorage.:- it works as a cookie.
+b)sessionStorage.:- it works as a session.
+
+Functions of Storage class:-
+1-setItem();
+Syntax:-
+storageobj.setItem("key","value");
+
+2-getItem();
+Syntax:-
+var variable=storageobj.getItem("key");
+
+3-removeItem();
+Syntax:-
+storageobj.removeItem("key");
+
+Syntax:- With out function.
+localStorage.variable=value;//set
+var variable=localStorage.variable;//get
+localStorage.variable="";//remove
+
+2-Web Worker:-
+	"Worker" class is defined to perform the js commad in the webpage.
+Syntax:-
+var obj=new Worker("file");
+
+postMessage(); to send the generated output from the background js file to webpage.
+
+'onMessage' event is triggered when the data is generated by background file.
+	And the value is received by 'event.data' variable.
+	terminate(); to stop the web worker.
+
+Syntax:-
+workerobj.terminate();
+
+SSE:-Stands for "Server Sent Event".
+
+"EventSource" class for SSE.
+
+1-onopen
+2-onmessage
+3-onerror
+
+Note:-PHP
+1- On Server Side We must set:-
+Content-Type:text/event-stream.
+Cache-Control:no-cache.
+
+2-Information Always Starts from "data:" String.
+
+3-After Sending the data we flush the information to prevent from caching.
+
+Drag & Drop:-
+
+Note:-
+1- We must provide "draggable"=true for that element which we want to drag.
+2- It have 3 events:-
+	a)ondrop
+	b)ondragstart
+	c)ondragover
+3-event.dataTransfer.setData("text",id);
+
+4-event.dataTransfer.getData("text");
+
+5-event.preventDefault();
+6-event.target.appendChild(DOM id);
+
+Geolocation in html5:-
+"navigator" object.
+
+Functions :-
+1-getCurrentPosition();//static location
+2-watchPosition();//dynamic
+3-clearWatch();
+
+Syntax:-
+1-navigator.geolocation.getCurrentPosition(position,error,options);
+
+2-navigator.geolocation.watchPosition(position,error,options);
+
+3-clearWatch(Id);
+
+
+properties of position object:-
+1-coords
+	a)latitude:-[-90 to +90]
+	b)longitude:-[-180 to +180]
+	c)altitude:- from 84 m above to sea lavel
+	d)heading: find the direction of movement of device.[clockwise from North]
+
+	e)speed: find speed of  device in m/s.
+
+2-timestamp:- find the date/time of geolocation object.
+
+Syntax:-
+position.coords.latitude;
+
+Properties of Error object:-
+1-code
+2-message
+
+Code	Constant		Message
+0	UNKNOWN_ERROR					1	PERMISSION_DENIED
+2	POSITION_UNAVAILABLE
+3	TIMEOUT
+
+
+Options object properties:-
+1-enableHighAccuracy
+2-timeout
+3-maximumAge
+
+URL to fined Location:-
+http://maps.googleapis.com/map/api/js?sensor=true
+
+
+
+
+
+
+
+
+

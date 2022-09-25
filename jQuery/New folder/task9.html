@@ -1,0 +1,102 @@
+<html>
+    <head>
+         <script src="jquery.min.js"></script>
+         <script>
+               $(document).ready(function(){
+                   $(".close").click(function(){
+                          $(".chk").hide(1000);
+                          $(".chk1").slideUp(1000);
+                          $(".nav-box").hide(2000); 
+                          $(".menu").show(2000); 
+                          $(".icon").slideUp(2000);
+                          $("p").hide(2000);  
+                    });
+                   $(".menu").click(function(){
+                           $(".nav-box").show(2000,function(){
+                                   $(".chk").slideDown(2000);
+                                   $(".chk1").show(2000);
+                                   $(".icon").show(2000);
+                                   $("p").show(2000);  
+                                          });
+                           $(".menu").hide(2000);
+                   });
+               });
+         </script>
+         <style>
+              *{
+                  margin:0px;
+                  padding:0px;
+                 }
+              .nav-box{
+                  height:50%;
+                  width:20%; 
+                  background:rgba(83,73,75,0.6);
+                  display:none;
+                 
+                    }
+              ul{
+                list-style:none;
+                padding:5px;
+                }
+              li{
+                  text-align:center;
+                  clear:both;
+                   padding:7px;
+                  box-shadow:2px 3px 4px silver;
+                  display:none;
+             }
+             li:hover{
+                  background:rgba(0.4,5,0,0.5);
+                  
+             }
+             a{
+              text-decoration:none;
+              color:white;  
+              font-size:30px;
+                }
+               a:hover{color:rgba(45,6,7,0.7);}
+           img{
+               height:50px; 
+               width:50px;
+               cursor:pointer;
+               }
+           p{
+              color:silver;
+              font-weight:bolder;
+              font-size:18px;
+              text-align:center;
+              padding:15px;
+              display:none;
+              border-top:2px solid silver;
+               }
+          .icon{
+            margin-left:20px;
+            display:none;
+               }
+           .social{
+             height:20px;
+             width:20px;
+              padding-left:35px;
+               }
+         </style>
+    </head>
+    <body>
+          <div><img style=" position:absolute;" class="menu" src="menu.png"/>
+          <div class="nav-box"> 
+                  <ul class="nav">
+                     <li style="float:right;cursor:pointer;border:none;display:block;box-shadow:2px 1px 3px red;" class="close">&times;</li>
+                     <li class="chk"><a href="#"><img src="home.png" style="height:30px;padding:0.2px;width:30px;"/>Home</a></li>
+                     <li class="chk1"><a href="#"><img src="about.png" style="height:30px;padding:0.2px;width:30px;"/>About</a></li>
+                     <li class="chk"><a href="#"><img src="user.png" style="height:30px;padding:0.2px;width:30px;"/>Profile</a></li>
+                     <li class="chk1"><a href="#"><img src="contact.png" style="height:30px;padding:0.2px;width:30px;"/>Contact</a></li> 
+                 </ul></br>
+           <p>Follow For More Update...</p>
+           <div class="icon">
+                <a href="https://twitter.com/Abhishe38357886"><img class="social" src="twitter.png"/></a>
+                <a href="#"><img class="social" src="facebook.png"/></a>
+                <a href="https://www.instagram.com/abhishekvishwakarma7437/"><img class="social" src="instagram.png"/></a>
+           </div>
+          </div>
+         </div>
+    </body>
+</html>

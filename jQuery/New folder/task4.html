@@ -1,0 +1,31 @@
+<html>
+    <head>
+         <script src="jquery.min.js"></script>
+         <script>
+               $(document).ready(function(){
+                   $(".main").hover(function(){
+                         $(".main").animate({left:'95%'},2000,function(){
+                                 $(".main").animate({top:'90%'},1000,function(){
+                                        $(".main").animate({left:'0%'},2000,function(){
+                                              $(".main").animate({top:'0%'},1000,function(){
+
+                                                   });
+                                  });                   
+                                         });
+                                  });
+                       });
+                   });
+         </script>
+         <style>
+              .main{
+                 height:50px;
+                 width:50px;
+                 background:red;
+                 position:relative;
+               }
+         </style> 
+   </head>
+   <body>
+        <img class="main" src="apple.jpg">
+   </body>
+</html>

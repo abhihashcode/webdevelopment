@@ -1,0 +1,39 @@
+<html>
+    <head>
+         <script>
+            function draw() 
+                      {    
+               c=document.getElementById("canvas");
+                ctx=c.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(200,200,120,((0*Math.PI)/180),((360*Math.PI)/180));
+                ctx.strokeStyle="darkblue";
+                ctx.fillStyle="black"; 
+                 ctx.fill();
+                ctx.stroke();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.arc(200,200,70,((0*Math.PI)/180),((360*Math.PI)/180));
+                ctx.strokeStyle="white";
+                ctx.fillStyle="white"; 
+                 ctx.fill();
+                ctx.stroke();
+                ctx.closePath();
+
+                    ctx.beginPath();
+                    ctx.translate(-40,-10);
+                    ctx.font="Bolder 4em Arial";
+                    ctx.fillStyle="white";
+                    ctx.fillText("B   M  W",120,140);
+                    ctx.stroke();
+                    ctx.closePath();
+                      }
+           </script>
+    </head>
+     <body onLoad="draw()">
+            <center>
+                  <canvas height="500" width="800" id="canvas" style="border:5px solid black"></canvas>
+            </center>
+      </body>
+</html>

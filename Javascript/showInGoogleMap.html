@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head><title>Geographic Location</title>
+<meta charset="UTF-8" />
+<script>
+var myOptn={
+enableHighAccuracy:true,
+timeout:Infinity,
+MaximumAge:6000
+};
+
+function getLocation()
+{
+var res=document.getElementById("loc");
+if(navigator.geolocation)
+{
+navigator.geolocation.getCurrentPosition(showLocation,showError,myOptn);
+res.innerHTML="Yes!! Your Browser Support Geolocation";
+}
+else
+res.innerHTML="Browser Not Support Geolocation";
+}
+function showLocation(position)
+{
+var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+var img_url = "http://maps.googleapis.com/maps/api/staticmap?center"
++latlon+"&zoom=14&size=400x300&sensor=false";
+document.getElementById("loc").innerHTML = "<img src='"+img_url+"'>";
+}
+
+function showError(error)
+  {
+  var res=document.getElementById("loc");
+  //document.getElementById("loc").innerHTML="Error:"+error.message;
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      res.innerHTML = "User denied the request for Geolocation.";
+      break;
+    case error.POSITION_UNAVAILABLE:
+      res.innerHTML = "Location information is unavailable.";
+      break;
+    case error.TIMEOUT:
+      res.innerHTML = "The request to get user location timed out.";
+      break;
+    case error.UNKNOWN_ERROR:
+      res.innerHTML = "An unknown error occurred.";
+      break;
+    }
+  }
+  
+</script>
+</head>
+<body>
+<p>Click to See Your Location Infomation:</p>
+<div id="loc"></div>
+<button onClick="getLocation();">Get My Map</button>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<body>
+<script>
+    var a,b,c,ch;
+ document.write("1.Add<br>");
+ document.write("2.Multi<br>");
+document.write("3.Even/Odd<br>");
+ch=parseInt(prompt("Enter choice...",""));
+
+  switch(ch)
+{
+   case 1:
+ a=parseInt(prompt("Enter first number",""));
+ b=parseInt(prompt("Enter second number",""));
+           c=a+b;
+  document.write("Sum="+c);
+    break;
+ case 2:
+      a=parseInt(prompt("Enter first number"));
+      b=parseInt(prompt("Enter second number"));
+           c=a*b;
+     document.write("Multi="+c);
+    break;
+  
+   case 3:
+        a=parseInt(prompt("Enter any number"));
+       if(a%2==0)
+  document.write("Number is Even");
+   else
+     document.write("Number is Odd");
+    break;
+   default;
+ document.write("Wrong Choice....")
+}
+    </script>
+    </body>
+   </html>

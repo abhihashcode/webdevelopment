@@ -1,0 +1,47 @@
+mobiscroll.settings = {
+    theme: 'ios'
+};
+
+var now = new Date(),
+    calendar = mobiscroll.eventcalendar('#demo', {
+        display: 'inline',
+        view: {
+            calendar: { type: 'month' },
+            eventList: { type: 'month' }
+        },
+        onInit: function (event, inst) {
+                mobiscroll.util.getJson('https://trial.mobiscroll.com/events/', function (events) {
+                    inst.setEvents(events);
+                }, 'jsonp');
+            }
+    });
+
+document.querySelectorAll('.md-view-change').forEach(function (elm) {
+    elm.addEventListener('change', function (ev) {
+        switch (ev.target.value) {
+            case 'month':
+                calendar.option({
+                    view: {
+                        calendar: { type: 'month' },
+                        eventList: { type: 'month' }
+                    }
+                })
+                break;
+            case 'week':
+                calendar.option({
+                    view: {
+                        calendar: { type: 'week' },
+                        eventList: { type: 'week' }
+                    }
+                })
+                break;
+            case 'day':
+                calendar.option({
+                    view: {
+                        eventList: { type: 'day' }
+                    }
+                })
+                break;
+        }
+    });
+});

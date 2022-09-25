@@ -1,0 +1,109 @@
+<html>
+   <head>
+         <script src="jquery.min.js"></script>
+         <script>
+                $(document).ready(function(){
+                     $(".clk").click(function(){
+                         $(".main-box").slideDown(2000);
+                                });
+                    $(".login").click(function(){
+                        $(".log-box").css({
+                                      'display':'block'
+                                           });         
+                        $(".sign-box").css({
+                                      'display':'none'
+                                           });   
+                        
+                        $(".main-box").css({
+                                      'height':'230px'
+                                           });     
+                         $(".see").html('Login Form');           
+                       });
+                    $(".sign").click(function(){
+                        $(".sign-box").css({
+                                      'display':'block'
+                                           });    
+                          $(".main-box").css({
+                                      'height':'380px'
+                                           });   
+                         $(".log-box").css({
+                                      'display':'none'
+                                         });                
+                         $(".see").html('Signup Form');
+                           });
+                 });
+         </script> 
+         <style>
+                *{
+                margin:0px;
+                padding:0px;
+                }
+              .click{
+                 height:50px;
+                 width:100px;
+                 border:1px solid orange;
+                 outline:none;
+                 color:white;
+                 background:rgba(0,0,0,0.5);
+                 color:orange;
+                 font-weight:bolder;
+                 font-size:20px;
+                      }
+              .main-box{
+                   height:230px;
+                   width:500px;
+                   border:2px solid red;
+                   margin:auto;
+                   box-shadow:2px 3px 4px 4px black;
+                   margin-top:10%;
+                   position:relative;
+                   display:none;
+                     } 
+               .log-box,.sign-box{
+                  margin-left:150px;
+                   padding:10px;
+                  border:1px solid silver;
+                  margin-right:155px;
+                  box-shadow:1px 2px 3px 4px silver;
+                     }	
+                 h1{
+                   text-align:center;
+                   background:red;
+                   padding:20px;
+                   margin-bottom:5px;
+                   }
+                 .inp{
+                      
+                        }
+         </style>
+   </head>
+   <body>
+         <div>
+             <button class="login click">Login</button>
+             <button class="sign click">Sign Up</button>
+             <button class="clk click" style="float:right;width:150px;">Display Div</button>
+         </div>
+         <div class="main-box">
+             <h1 class="see">Login Form</h1> 
+              <div class="log-box">
+
+                     <div>Username</div><input type="text"/ class="txt inp">
+                     <div>Password</div><input type="password" class="pass inp"/>
+                     <button style="display:block;margin:5px 65px;">Login</button>
+            </div>
+              <div style="display:none;" class="sign-box">
+
+                   
+                     <div>Name</div><input type="text"/ class="txt inp">
+                     <div>Education</div><input type="password" class="pass inp"/>
+                     <div>Create Username</div><input type="text"/ class="txt inp">
+                     <div>New Password</div><input type="password" class="pass inp"/>
+                     <div>Date of Birth</div><input type="text"/ class="txt inp">
+                     <div>Mobile</div><input type="password" class="pass inp"/>
+
+                     <button style="display:block;margin:5px 65px;">SignUp</button>
+
+             </div>
+         </div>
+   </body>
+</html>

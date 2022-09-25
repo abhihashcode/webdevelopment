@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+   <head>
+      <script>
+          function check(){
+            var c=document.getElementById("mycanvas");
+            var ctx=c.getContext("2d");
+            var m=c.width/2;
+            ctx.moveTo(290,50);
+            ctx.lineTo(415,50);
+            ctx.lineTo(360,150);
+            ctx.lineTo(290,50);
+            ctx.stroke(); 
+
+            ctx.moveTo(290,120);
+            ctx.lineTo(430,120);
+            ctx.lineTo(355,30);
+            ctx.lineTo(290,120);
+            ctx.stroke();
+              }
+      </script>
+   </head>
+   <body onLoad="check();">
+      <center>
+   <canvas id="mycanvas" height="400px" width="600px" style="border:5px solid black;"></canvas>
+      </center>
+   </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+         <script src="jquery.min.js"></script>
+         <script>
+               $(document).ready(function(){
+                   $(".main").click(function(){
+                         $(".main").animate({left:'90%'},2000,function(){
+                                 $(".main").animate({top:'66%'},1000,function(){
+                                             $(".dust").animate({bottom:'100px'},1000,function(){
+                                                     $(".dust").animate({bottom:'5px'},1000);
+                                                                     });
+                                              $(".main").hide(1000);  
+                                             
+                                         });
+                                  });
+                       });
+                   });
+         </script>
+         <style>
+              .main{
+                 height:70px;
+                 width:70px;
+                 
+                 position:relative;
+               }
+              .dust{
+              position:absolute;
+              right:5px;
+              bottom:5px;
+              height:200px;
+              width:200px;
+                  }
+            .apple{
+               overflow:hidden;
+                  }
+         </style> 
+   </head>
+   <body>
+    <img src="dust.png" class="dust"/>     
+        <img class="main" src="apple.png"/>
+    
+   </body>
+</html>

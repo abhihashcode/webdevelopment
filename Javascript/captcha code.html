@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+function getValue()
+{
+var captureCode=Math.round(Math.random()*10000);
+t1.value=captureCode;
+t1.style.background="red";
+t1.style.color="white";
+t1.style.resize="none";
+t1.style.fontFamily="Segoe Script";
+t1.style.border="none";
+t1.style.textAlign="center";
+
+}
+</script>
+</head>
+<body onload="getValue()">
+<center>
+<textarea name="t1" id="t1" cols="5" rows="1">
+</textarea>
+</center>
+</body>
+</html>

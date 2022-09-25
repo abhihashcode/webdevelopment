@@ -1,0 +1,39 @@
+<html>
+     <head>
+           <script src="jquery.min.js"></script>
+           <script>
+                     $(document).ready(function(){
+                        $(".more").click(function(){
+                              $(".hideText").show();
+                              $(".less").show();
+                              $(".more").hide();
+                                      });
+                      $(".less").click(function(){
+                              $(".hideText").hide();
+                              $(".less").hide();
+                              $(".more").show();
+                                      });
+                                                  
+                          });
+           </script>
+           <style>
+                  .content-box{
+                          border:2px solid silver;
+                             }
+           </style>
+      </head>
+     <body>
+          <div class="content-box">
+                <span>QuickSort Algorithm in JavaScript 
+Quick Sort algorithm is one of the most used and popular algorithms in any programming language. But, if you are a JavaScript developer, then you might of heard of sort() which is already available in JavaScript. Then, you might have been thinking what the need of this Quick Sort algorithm is. To understand this, first we need what is sorting and what is the default sorting in JavaScript. 
+</span>
+<span class="hideText" style="display:none;"> 
+What is Sorting?
+Sorting is nothing but, arranging elements in the order we want. You might have come across this in your school or college days. Like arranging numbers from smaller to greater (ascending) or from greater to smaller (descending) is what we saw till now and is called sorting. 
+Default sorting in JavaScript
+</span>
+<button class="more"  style="background:orange;color:white;outline:none;border:1px solid green;">more...</button>
+<button class="less" style="display:none;background:orange;color:white;outline:none;border:1px solid green;">less...</button>  
+        </div>         
+     </body>
+</html>

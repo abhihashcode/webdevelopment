@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>Geographic Location</title>
+<meta charset="UTF-8" />
+<script>
+function checkGeoLoc()
+{
+var res=document.getElementById("loc");
+if(navigator.geolocation)
+{
+navigator.geolocation.getCurrentPosition(getMap,showError);
+res.innerHTML="Yes!! Your Browser Support Geolocation";
+}
+else
+res.innerHTML="Browser Not Support Geolocation";
+}
+
+function getMap(position)
+{
+var res=document.getElementById("loc");
+var latlon=position.coords.latitude+","+position.coords.longitude;
+var img_url="http://maps.googleapis.com/maps/api/staticmap?center"+latlon+"&zoom=18&size=400x500&sensor=false";
+res.innerHTML="<img src='"+img_url+"'>";
+}
+
+function showError(error)
+  {
+  document.getElementById("loc").innerHTML="Error:"+error.message;
+  }
+</script>
+</head>
+<body>
+<p>Click to See Your Location Infomation:</p>
+<div id="loc"></div>
+<button onClick="checkGeoLoc();">Check Geolocation</button>
+</body>
+</html>

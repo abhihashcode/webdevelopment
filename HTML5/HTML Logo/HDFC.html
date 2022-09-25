@@ -1,0 +1,58 @@
+<html>
+    <head>
+          <script>
+                  function draw()
+                        {
+                     c=document.getElementById("canvas");
+                     ctx=c.getContext("2d");
+                     ctx.beginPath();
+                     ctx.lineWidth="25";
+                     ctx.strokeStyle="red";
+                    ctx.rect(100,100,160,140);
+                    ctx.stroke();
+                    ctx.closePath();
+                   ctx.beginPath();
+                    ctx.moveTo(180,80);
+                    ctx.lineTo(180,700); 
+                   ctx.strokeStyle="white"; 
+                    ctx.stroke();
+                     ctx.beginPath();
+                    ctx.moveTo(80,170);
+                    ctx.lineTo(580,170); 
+                   ctx.strokeStyle="white"; 
+                    ctx.stroke(); 
+
+                    ctx.beginPath();
+                     ctx.lineWidth="1";
+                    ctx.rect(145,135,70,70);
+                    ctx.fillStyle="blue";
+                    ctx.fill();
+                    ctx.stroke();
+                    ctx.closePath();
+                    
+                    
+                    ctx.beginPath();
+                    ctx.lineWidth="1";
+                    ctx.rect(272,87,500,166);
+                    ctx.fillStyle="blue";
+                    ctx.fill();
+                    ctx.stroke();
+                    ctx.closePath();
+                  
+                   
+                    ctx.beginPath();
+                    ctx.font="Bolder 5em Arial";
+                    ctx.fillStyle="white";
+                    ctx.fillText("HDFC BANK",290,200);
+                    ctx.stroke();
+                    ctx.closePath();
+                                                         
+       }
+          </script>
+    </head>
+    <body onLoad="draw()">
+            <center>
+                  <canvas id="canvas" height="400" width="800" style="border:5px solid black"></canvas>
+            </center>
+     </body>
+</html>

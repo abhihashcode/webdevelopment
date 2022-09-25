@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+  <head>
+      <script>
+           function change() 
+              {
+              var c=document.getElementById("canvas");
+              var ctx=c.getContext("2d");
+              ctx.strokeStyle="green";
+              m=c.width/2;
+              ctx.moveTo(m,10);
+              ctx.lineTo(m+10,10);
+              ctx.lineTo(m+10,20);
+              ctx.lineTo(m,20);
+              ctx.lineTo(m,10);
+              ctx.moveTo(m+5,30);
+              ctx.lineTo(m+5,100);  
+              
+              ctx.moveTo(m+50,10);
+              ctx.lineTo(m+60,10);
+              ctx.lineTo(m+60,20);
+              ctx.lineTo(m+50,20);
+              ctx.lineTo(m+50,10);
+              ctx.moveTo(m+55,30);
+              ctx.lineTo(m+55,100);
+
+              ctx.moveTo(m+100,30);
+              ctx.lineTo(m+150,30);
+              ctx.lineTo(m+100,30);
+              ctx.lineTo(m+100,100);
+              ctx.lineTo(m+150,100);
+
+              ctx.moveTo(m+200,30);
+              ctx.lineTo(m+250,30);
+              ctx.lineTo(m+200,30);
+              ctx.lineTo(m+200,65);
+              ctx.lineTo(m+250,65);
+              ctx.lineTo(m+250,100);
+              ctx.lineTo(m+200,100);
+              ctx.stroke();
+              }
+      </script>
+  </head>
+  <body bgColor="red" onLoad="change()">
+      <center>
+         <canvas height="400px" width="600px" id="canvas" style="border:5px solid black;"></canvas>
+      </center>
+  </body>
+</html>

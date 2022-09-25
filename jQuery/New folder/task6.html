@@ -1,0 +1,30 @@
+<html>
+    <head>
+         <script src="jquery.min.js"></script>
+         <script>
+                $(document).ready(function(){
+                       $("#chk").click(function(){
+                               if($("label").text()=="Show")
+                                      {
+                                          $("#pass").attr('type','text');
+                                          $("label").text('Hide');
+                                           $("label").prop('style').color='green';
+                                       }else{
+                                            $("#pass").attr('type','password');
+                                            $("label").text('Show');
+                                            $("label").prop('style').color='red';
+                                             }
+                        });
+                    });
+         </script>
+         <style>
+           /*val(),attr(),text(),html(),
+         </style>
+    </head>
+    <body>
+        <div>Password</div>
+        <input type="password" id="pass"/>
+        <input type="checkbox" id="chk"/>
+        <label style="color:red;">Show</label>
+     </body>
+</html>

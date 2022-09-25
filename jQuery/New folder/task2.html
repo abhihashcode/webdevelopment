@@ -1,0 +1,45 @@
+<html>
+     <head>
+           <script src="jquery.min.js"></script>
+           <script>
+                     $(document).ready(function(){
+                        $(".imf").mouseover(function(){
+                              $(".intro").slideDown(2000);
+                                      });
+                         $(".imf").mouseout(function(){
+                              $(".intro").slideUp(2000);
+                                      });
+                          });
+           </script>
+           <style>
+                 .admin{
+                     height:202px;
+                     width:202px;
+                     border:solid red 0.2px;
+                         }
+                 img{
+                  height:200px;
+                  width:200px;
+                  position:absolute;
+                    } 
+                 .intro{
+                   height:200px;
+                  width:200px;
+                  background:rgba(2,33,0,0.6);
+                  position:absolute;
+                  text-align:center;
+                  line-height:190px;
+                  color:red;
+                  font-size:30px;
+                  font-weight:bolder;
+                  display:none;
+                    }
+           </style>
+     </head>
+     <body>
+           <div class="admin">
+                <img src="a.jpg" class="imf"/>
+                <div class="intro">Developer</div>
+           </div>            
+     </body>
+</html>

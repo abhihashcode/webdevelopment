@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="600" height="500"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(195,200,40,((0*Math.PI)/180),((360*Math.PI)/180));
+ctx.closePath();
+ctx.stroke();
+ctx.fillStyle="black";
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(195,200,2,((0*Math.PI)/180),((360*Math.PI)/180));
+ctx.closePath();
+ctx.stroke();
+ctx.fillStyle="red";
+ctx.fill();
+
+ctx.beginPath();
+ctx.lineWidth="4";
+ctx.moveTo(195,200);
+ctx.lineTo(220,250);
+ctx.lineTo(195,200);
+ctx.lineTo(120,280);
+ctx.lineTo(195,200);
+ctx.lineTo(150,100);
+ctx.lineTo(195,200);
+ctx.lineTo(280,100);
+ctx.lineTo(195,200);
+ctx.lineTo(280,250);
+ctx.lineTo(195,200);
+ctx.lineTo(280,190);
+ctx.lineTo(195,200);
+ctx.lineTo(120,220);
+ctx.lineTo(195,200);
+ctx.lineTo(120,165);
+ctx.strokeStyle="white";
+ctx.stroke();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.lineWidth="4";
+ctx.moveTo(195,200);
+ctx.lineTo(195,300);
+ctx.strokeStyle="red";
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.lineWidth="4";
+ctx.arc(185,300,10,6,3);
+ctx.strokeStyle="red";
+ctx.stroke();
+</script> 
+
+</body>
+</html>

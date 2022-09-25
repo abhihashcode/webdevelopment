@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><title>Geographic Location</title>
+<meta charset="UTF-8" />
+<script>
+var myOptn={
+enableHighAccuracy:true,
+timeout:Infinite,
+maximumAge:6000
+};
+
+function getLocation()
+{
+var res=document.getElementById("loc");
+if(navigator.geolocation)
+{
+navigator.geolocation.getCurrentPosition(showLocation,showError,myOptn);
+res.innerHTML="Yes!! Your Browser Support Geolocation";
+}
+else
+res.innerHTML="Browser Not Support Geolocation";
+}
+function showLocation(position)
+{
+var res=document.getElementById("loc");
+var lat=position.coords.latitude;
+var lon=position.coords.longitude;
+res.innerHTML="Latitude:"+lat+"&deg;<br> Longitude:"+lon+"&deg;";
+}
+
+function showError(error)
+  {
+  var res=document.getElementById("loc");
+  //document.getElementById("loc").innerHTML="Error:"+error.message;
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      res.innerHTML = "User denied the request for Geolocation.";
+      break;
+    case error.POSITION_UNAVAILABLE:
+      res.innerHTML = "Location information is unavailable.";
+      break;
+    case error.TIMEOUT:
+      res.innerHTML = "The request to get user location timed out.";
+      break;
+    case error.UNKNOWN_ERROR:
+      res.innerHTML = "An unknown error occurred.";
+      break;
+    }
+  }
+</script></head><body>
+<p>Click to See Your Location Infomation:</p>
+<div id="loc"></div>
+<button onClick="getLocation();">Get</button>
+</body>
+</html>

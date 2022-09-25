@@ -1,0 +1,60 @@
+<html>
+    <head>
+         <script src="jquery.min.js"></script>
+         <script>
+             $(document).ready(function(){
+                 $(".like").hover(function(){
+                       $(".emoji").slideToggle(2000);
+                   });
+              });
+         </script>
+         <style>
+               .social,.emoji{
+                   height:50px;
+                   width:600px;
+                   background:white;
+                   border-radius:30px;
+                   box-shadow:1px 1px 2px 3px silver;
+                   cursor:pointer;
+                   padding-left:30px;
+                   padding-bottom:25px;
+                   margin-top:80px;
+                     }
+               img{
+                 height:30px;
+                 width:40px; 
+                   }
+                h2{
+                  display:inline-block;
+                  font-size:30px;
+                  color:silver;
+                  padding-right:70px;
+                     }
+                 .emoji{
+                  display:none;
+                  position:absolute;
+                  bottom:588px;
+                  width:550px;
+                  box-shadow:0px 0px 0px 2px #ffe4e1;
+                  font-size:70px; 
+                  background:white;
+                  padding-bottom:35px;
+                   }
+         </style>
+    </head>
+    <body>
+           <div class="emoji">
+                         <label>&#128076;</label>
+                         <label>&#128518;</label>
+                         <label>&#128147;</label>
+                         <label>&#128546;</label>
+                         <label>&#128562;</label>
+                         <label>&#128520;</label>
+          </div>
+            <div class="social">
+                 <img src="like.png" class="like"/><h2>Like</h2>
+                 <img src="comment.png"/><h2>Comment</h2>
+                 <img src="share.png"/><h2>Share</h2>
+             </div>
+    </body>
+</html>

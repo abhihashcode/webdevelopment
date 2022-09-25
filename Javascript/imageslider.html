@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+ var imgArray=["a.jpg.jpg","b.jpg.jpg","c.jpg.jpg","d.jpg.jpg"];
+ var i=0;
+  function imageslider()
+    {
+   document.getElementById("main").src=imgArray[i];
+     i++;
+     if(i==4)
+       i=0;
+     }
+   setInterval("imageslider()",2000);
+ </script>
+</head>
+<body onload="imageslider()">
+ <center>
+   <img src=height="200" width="300" name="main" id="main"/>
+   </center>
+</body>
+</html>
+

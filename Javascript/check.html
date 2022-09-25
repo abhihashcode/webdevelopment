@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Geographic Location</title>
+<meta charset="UTF-8" />
+<script>
+function checkGeoLoc()
+{
+var res=document.getElementById("loc");
+if(navigator.geolocation)
+{
+res.innerHTML="Yes!! Your Browser Support Geolocation";
+}
+else
+res.innerHTML="Browser Not Support Geolocation";
+}
+</script>
+</head>
+<body>
+<p>Click to See Your Location Infomation:</p>
+<div id="loc"></div>
+<button onClick="checkGeoLoc();">Check Geolocation</button>
+</body>
+</html>
